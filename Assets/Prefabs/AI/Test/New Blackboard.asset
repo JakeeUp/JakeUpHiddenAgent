@@ -22,3 +22,6 @@ MonoBehaviour:
   - keyName: nextPatrolPoint
     runtimeValue: 
     type: 3
+  - keyName: lastSeenLocation
+    runtimeValue: 
+    type: 3

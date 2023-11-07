@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36397b63d79b0145b61e8a9bd36ab8d, type: 3}
   m_Name: Selector
   m_EditorClassIdentifier: 
-  graphPos: {x: -31.807533, y: 252.5175}
+  graphPos: {x: -406.71594, y: 546.5588}
   guid: d4c04e7521ad52340a7b8a5ab88fc6c3
+  priority: 1
   children:
   - {fileID: -6872758800268633623}
+  - {fileID: -4046866571602888856}
   - {fileID: -5546865130255597701}
 --- !u!114 &-8450529855970865980
 MonoBehaviour:
@@ -29,8 +31,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97d8ee7749f00a4cab1ff36987ec3a3, type: 3}
   m_Name: BTTaks_MoveToPosition
   m_EditorClassIdentifier: 
-  graphPos: {x: 363.64502, y: 647.03}
+  graphPos: {x: 528.1556, y: 999.307}
   guid: c2b6f5368bdc3e146ab211674420f341
+  priority: 17
   targetKeyName: nextPatrolPoint
   acceptableDistance: 2
 --- !u!114 &-6872758800268633623
@@ -45,8 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13456c9b387868f4383dbdb1fac2d7f1, type: 3}
   m_Name: BlackboardDecorator
   m_EditorClassIdentifier: 
-  graphPos: {x: -185, y: 378}
+  graphPos: {x: -1089.4812, y: 680.33264}
   guid: 604631836f821d8429d459362403b7a3
+  priority: 2
   child: {fileID: -4987564836445033968}
   keyName: target
   runCondition: 0
@@ -64,8 +68,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1c0262c7087b1488ceda492e3004fe, type: 3}
   m_Name: BTTask_MoveToGameObject
   m_EditorClassIdentifier: 
-  graphPos: {x: -460.87256, y: 651}
+  graphPos: {x: -1613.6, y: 943.60004}
   guid: d7503359eb13b2146b879d49b3b3b0ef
+  priority: 4
   targetKeyName: target
   acceptableDistance: 2
 --- !u!114 &-5546865130255597701
@@ -80,8 +85,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1fe1b68cb2d6e4e8b52d99a8b1b473, type: 3}
   m_Name: Sequencer
   m_EditorClassIdentifier: 
-  graphPos: {x: 184, y: 373}
+  graphPos: {x: 348.15555, y: 725.7069}
   guid: 9901673b02baa014c9002df2253bbbbf
+  priority: 15
   children:
   - {fileID: 574922963850710820}
   - {fileID: -8450529855970865980}
@@ -98,8 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360cbfdf5b86e4f4b94ba3ee049f16f5, type: 3}
   m_Name: BTTask_Log
   m_EditorClassIdentifier: 
-  graphPos: {x: -121.872536, y: 654}
+  graphPos: {x: -956.4, y: 949.8}
   guid: 9bba7ba8e6bef0248a5da915f7380c0c
+  priority: 5
   message: gotcha!!!
 --- !u!114 &-4987564836445033968
 MonoBehaviour:
@@ -113,11 +120,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1fe1b68cb2d6e4e8b52d99a8b1b473, type: 3}
   m_Name: Sequencer
   m_EditorClassIdentifier: 
-  graphPos: {x: -281, y: 498}
+  graphPos: {x: -1185.4813, y: 800.3327}
   guid: 181f3002e26e4b74097002cf02dcc656
+  priority: 3
   children:
   - {fileID: -5789525585994014425}
   - {fileID: -5511732783932645331}
+  - {fileID: 7188129883305872028}
+--- !u!114 &-4046866571602888856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13456c9b387868f4383dbdb1fac2d7f1, type: 3}
+  m_Name: BlackboardDecorator
+  m_EditorClassIdentifier: 
+  graphPos: {x: -377.11594, y: 731.35876}
+  guid: 938d43c40b7802f4d934dd1346cd2a62
+  priority: 6
+  child: {fileID: -2930580929196267961}
+  keyName: lastSeenLocation
+  runCondition: 0
+  notifyRule: 0
+  notifyAbort: 0
 --- !u!114 &-3734011579603306826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,9 +159,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a2c2d38495ef84a90ccc0bc13b05f2, type: 3}
   m_Name: BTNode_Root
   m_EditorClassIdentifier: 
-  graphPos: {x: -20.807512, y: 141.51753}
+  graphPos: {x: -395.51596, y: 435.35873}
   guid: 4a1bef33a6511af4ebde4d15b0fda257
+  priority: 0
   child: {fileID: -8618755738673494579}
+--- !u!114 &-3430197462197635907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2b8f8366c4eda42a59367f00219c68, type: 3}
+  m_Name: BTTask_Rotate
+  m_EditorClassIdentifier: 
+  graphPos: {x: -456.9648, y: 1299.8668}
+  guid: d506a1b661e722e428b5fd9aefc6c82b
+  priority: 10
+  targetKeyName: target
+  acceptableDistance: 2
+  angleDegrees: 30
+  acceptableOffset: 5
+  turnSpeed: 8
+--- !u!114 &-3380946207426055038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1317466da729c6e47a277acefe5402a2, type: 3}
+  m_Name: BTTask_ClearBlackBoardEntry
+  m_EditorClassIdentifier: 
+  graphPos: {x: 180.04509, y: 1155.8206}
+  guid: 71cc292e34123ab428573e920e9e06e5
+  priority: 14
+  blackboardKeyName: lastSeenLocation
+--- !u!114 &-2930580929196267961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb1fe1b68cb2d6e4e8b52d99a8b1b473, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  graphPos: {x: -363.7873, y: 905.302}
+  guid: 8a59aa19a3e0ba741825550812e0a903
+  priority: 7
+  children:
+  - {fileID: 8731890787356176399}
+  - {fileID: -188274692617992052}
+  - {fileID: -3430197462197635907}
+  - {fileID: 1193376568726971353}
+  - {fileID: 4301677676769400855}
+  - {fileID: 4581529054662423331}
+  - {fileID: -3380946207426055038}
 --- !u!114 &-226598844428118955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +234,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b4642c921ce6a48a2d9c13daad09db, type: 3}
   m_Name: BTTask_Wait
   m_EditorClassIdentifier: 
-  graphPos: {x: 560.6451, y: 646.03}
+  graphPos: {x: 724.9555, y: 998.50696}
   guid: ff443c73cdc80204086ed6eaa3078d83
+  priority: 18
+  waitTime: 2
+--- !u!114 &-188274692617992052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b4642c921ce6a48a2d9c13daad09db, type: 3}
+  m_Name: BTTask_Wait
+  m_EditorClassIdentifier: 
+  graphPos: {x: -609.92126, y: 1243.3649}
+  guid: edcf7e23342835a4b9c932c1517ec717
+  priority: 9
   waitTime: 2
 --- !u!114 &11400000
 MonoBehaviour:
@@ -172,6 +278,16 @@ MonoBehaviour:
   - {fileID: -5789525585994014425}
   - {fileID: -5511732783932645331}
   - {fileID: -6872758800268633623}
+  - {fileID: -4046866571602888856}
+  - {fileID: 8731890787356176399}
+  - {fileID: -188274692617992052}
+  - {fileID: -2930580929196267961}
+  - {fileID: -3380946207426055038}
+  - {fileID: -3430197462197635907}
+  - {fileID: 1193376568726971353}
+  - {fileID: 4301677676769400855}
+  - {fileID: 4581529054662423331}
+  - {fileID: 7188129883305872028}
   blackboard: {fileID: 11400000, guid: 2b7ac682759b5134babd882f15eb6688, type: 2}
 --- !u!114 &574922963850710820
 MonoBehaviour:
@@ -185,6 +301,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a162d087b8ef4428cadc5c96d5a3de, type: 3}
   m_Name: BTTask_GetNextPatrolPoint
   m_EditorClassIdentifier: 
-  graphPos: {x: 133.64497, y: 653.03}
+  graphPos: {x: 297.75555, y: 1005.707}
   guid: d15e9f9dc35e9404fbfce49d3366dada
+  priority: 16
   patrolPointKeyName: nextPatrolPoint
+--- !u!114 &1193376568726971353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b4642c921ce6a48a2d9c13daad09db, type: 3}
+  m_Name: BTTask_Wait
+  m_EditorClassIdentifier: 
+  graphPos: {x: -278.76035, y: 1329.843}
+  guid: 3c4d3846549580d45b9ea48739a73bb7
+  priority: 11
+  waitTime: 2
+--- !u!114 &4301677676769400855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2b8f8366c4eda42a59367f00219c68, type: 3}
+  m_Name: BTTask_Rotate
+  m_EditorClassIdentifier: 
+  graphPos: {x: -101.05031, y: 1290.1959}
+  guid: 4515e518edee68b48a6540aadb4ab1e4
+  priority: 12
+  targetKeyName: target
+  acceptableDistance: 2
+  angleDegrees: -60
+  acceptableOffset: 5
+  turnSpeed: 8
+--- !u!114 &4581529054662423331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b4642c921ce6a48a2d9c13daad09db, type: 3}
+  m_Name: BTTask_Wait
+  m_EditorClassIdentifier: 
+  graphPos: {x: 51.302494, y: 1226.0787}
+  guid: 554e0a0ac1d6d02488691be42bb06d27
+  priority: 13
+  waitTime: 2
+--- !u!114 &7188129883305872028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4defb9a83527a43b64274388e3263c, type: 3}
+  m_Name: BTTask_RotateTowardsTarget
+  m_EditorClassIdentifier: 
+  graphPos: {x: -1284.7894, y: 985.0054}
+  guid: f8984ac095d0b0b4db472683d65d841b
+  priority: 5
+  keyName: target
+  acceptableAngle: 5
+--- !u!114 &8731890787356176399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97d8ee7749f00a4cab1ff36987ec3a3, type: 3}
+  m_Name: BTTaks_MoveToPosition
+  m_EditorClassIdentifier: 
+  graphPos: {x: -784.36884, y: 1124.5815}
+  guid: 62facfb4b0c5519408ef0163ff7a789b
+  priority: 8
+  targetKeyName: lastSeenLocation
+  acceptableDistance: 2

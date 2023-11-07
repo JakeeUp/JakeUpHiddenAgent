@@ -20,6 +20,14 @@ public class AIController : MonoBehaviour
 
     private void TargetUpdated(GameObject newTarget)
     {
+        if(newTarget == null)
+        {
+            if(behaviorTree.GetBlackBoard().GetBlackboarData("target", out GameObject target))
+            {
+                behaviorTree.GetBlackBoard().SetBloackboardData("lastSeenLocation", target.transform.position);
+            }
+        }
+
         behaviorTree.GetBlackBoard().SetBloackboardData("target", newTarget);
     }
 

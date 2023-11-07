@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IMovementInterface
 {
     [SerializeField] ValueGuage healthBarPrefab;
     [SerializeField] Transform healthBarAttachTransform;
     HealthComponet healthComponet;
+    MovementComponent movementComponent;
 
     ValueGuage healthBar;
 
@@ -19,9 +20,11 @@ public class Enemy : MonoBehaviour
         healthComponet.onHealthEmpty += StartDealth;
         healthComponet.onHealthChanged += HealthChanged;
 
+
         healthBar = Instantiate(healthBarPrefab, FindObjectOfType<Canvas>().transform);
         UIAttachComponent attachmentComp = healthBar.AddComponent<UIAttachComponent>();
         attachmentComp.SetupAttachment(healthBarAttachTransform);
+        movementComponent = GetComponent<MovementComponent>();
     }
 
     private void HealthChanged(float currentHealth, float delta, float maxHealth)
@@ -49,5 +52,15 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RotateTowards(Vector3 direction)
+    {
+        movementComponent.RotateTowards(direction);
+    }
+
+    public void RotateTowards(GameObject target)
+    {
+        movementComponent.RotateTowards(target.transform.position - transform.position);
     }
 }

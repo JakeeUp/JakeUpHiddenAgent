@@ -74,7 +74,7 @@ public class BTTask_MoveToGameObject : BTNode
 
     public override void End()
     {
-        agent.isStopped = true;
+        if (agent) agent.isStopped = true;
         if(blackboard)
         {
             blackboard.onBlackboardValueChanged -= BlackboardValuedChanged;

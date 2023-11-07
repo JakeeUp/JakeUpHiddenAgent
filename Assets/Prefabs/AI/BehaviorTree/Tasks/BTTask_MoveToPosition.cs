@@ -57,7 +57,11 @@ public class BTTaks_MoveToPosition : BTNode
 
     public override void End()
     {
-        agent.isStopped = true;
-        base.End();
+        if (agent) agent.isStopped = true;
+        
+            base.End();
+        
+       
+        
     }
 }

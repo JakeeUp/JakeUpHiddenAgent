@@ -81,6 +81,12 @@ public class BlackboardEntry
     {
         return value;
     }
+
+    public void ClearEntryValue()
+    { 
+        value = null;
+        runtimeValue = "";
+    }
 }
 [CreateAssetMenu(menuName = "BehaviorTree/Blackboard")]
 public class Blackboard : ScriptableObject
@@ -136,5 +142,16 @@ public class Blackboard : ScriptableObject
         }
 
         return null;
+    }
+
+    public void ClearBlackboardData(string keyName)
+    {
+        foreach(var entry in blackboardData)
+        {
+            if (entry.GetKeyName() == keyName)
+            {
+                entry.ClearEntryValue();
+            }
+        }
     }
 }
