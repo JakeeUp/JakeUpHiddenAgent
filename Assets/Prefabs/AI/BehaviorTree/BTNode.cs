@@ -62,7 +62,7 @@ public abstract class BTNode : ScriptableObject
         return null;
     }
 
-    IBTTaskInterface GetInterface()
+    public IBTTaskInterface GetInterface()
     {
         GameObject owner = GetOwner();
         if(owner)
