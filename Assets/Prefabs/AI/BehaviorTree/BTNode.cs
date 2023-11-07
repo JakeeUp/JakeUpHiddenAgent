@@ -43,7 +43,34 @@ public abstract class BTNode : ScriptableObject
     {
         priority = priorityCount++;
     }
+    public Blackboard GetBlackboard()
+    {
+        if(GetBehaviorTree())
+        {
+            return GetBehaviorTree().GetBlackBoard();
+        }
+        return null;
+    }
 
+    public GameObject GetOwner()
+    {
+        if(GetBlackboard())
+        {
+            GetBlackboard().GetBlackboarData("owner", out GameObject owner);
+            return owner;
+        }    
+        return null;
+    }
+
+    IBTTaskInterface GetInterface()
+    {
+        GameObject owner = GetOwner();
+        if(owner)
+        {
+            return owner.GetComponent<IBTTaskInterface>();
+        }
+        return null;
+    }
     public void Init(BehaviorTree behaviorTree)
     {
         owningBehaviorTree = behaviorTree;

@@ -4,12 +4,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IMovementInterface
+public class Enemy : MonoBehaviour, IMovementInterface, IBTTaskInterface
 {
     [SerializeField] ValueGuage healthBarPrefab;
     [SerializeField] Transform healthBarAttachTransform;
     HealthComponet healthComponet;
     MovementComponent movementComponent;
+
+    Animator animator;
+
+    Vector3 prevPosition;
+    Vector3 velocity;
 
     ValueGuage healthBar;
 
@@ -25,6 +30,7 @@ public class Enemy : MonoBehaviour, IMovementInterface
         UIAttachComponent attachmentComp = healthBar.AddComponent<UIAttachComponent>();
         attachmentComp.SetupAttachment(healthBarAttachTransform);
         movementComponent = GetComponent<MovementComponent>();
+        animator = GetComponent<Animator>();
     }
 
     private void HealthChanged(float currentHealth, float delta, float maxHealth)
@@ -45,13 +51,20 @@ public class Enemy : MonoBehaviour, IMovementInterface
     // Start is called before the first frame update
     void Start()
     {
-        
+        prevPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        CalculateVelocity();
+    }
+
+    private void CalculateVelocity()
+    {
+        velocity = (transform.position - prevPosition) / Time.deltaTime;
+        prevPosition = transform.position;
+        animator.SetFloat("speed", velocity.magnitude);
     }
 
     public void RotateTowards(Vector3 direction)
@@ -62,5 +75,10 @@ public class Enemy : MonoBehaviour, IMovementInterface
     public void RotateTowards(GameObject target)
     {
         movementComponent.RotateTowards(target.transform.position - transform.position);
+    }
+
+    public void AttackTarget(GameObject target)
+    {
+        animator.SetTrigger("Attack");
     }
 }
