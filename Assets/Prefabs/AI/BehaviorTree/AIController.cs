@@ -56,4 +56,9 @@ public class AIController : MonoBehaviour
     {
         behaviorTree?.Update();
     }
+
+    internal void StopAILogic()
+    {
+        behaviorTree.Stop();
+    }
 }

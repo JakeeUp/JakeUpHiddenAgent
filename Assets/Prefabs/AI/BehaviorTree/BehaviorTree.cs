@@ -22,6 +22,8 @@ public class BehaviorTree : ScriptableObject
 
     //getter or accssor for the nodes
     public List<BTNode> GetNodes() { return nodes; }
+
+    bool stopped;
     public void PreConstruct()
     {
         if(!rootNode)
@@ -52,6 +54,7 @@ public class BehaviorTree : ScriptableObject
         {
             node.onBecomeActive += CurrentNodeChanged;
         }
+        stopped = false;
     }
 
     private void CurrentNodeChanged(BTNode node)
@@ -61,6 +64,7 @@ public class BehaviorTree : ScriptableObject
 
     public void Update()
     {
+        if(stopped) return;
         rootNode.UpdateNode();
     }
 
@@ -90,7 +94,11 @@ public class BehaviorTree : ScriptableObject
         //AssetDatabase.RemoveObjectFromAsset(node);
         SaveTree();
     }
-
+    public void Stop()
+    {
+        stopped = true;
+        rootNode.End();
+    }
     public void SortTree()
     {
         foreach(BTNode node in nodes)

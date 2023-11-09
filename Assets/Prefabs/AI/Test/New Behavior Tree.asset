@@ -33,7 +33,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: 591.51984, y: 919.51984}
   guid: c2b6f5368bdc3e146ab211674420f341
-  priority: 18
+  priority: 19
   targetKeyName: nextPatrolPoint
   acceptableDistance: 2
 --- !u!114 &-6872758800268633623
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: 539.78064, y: 694.2197}
   guid: 9901673b02baa014c9002df2253bbbbf
-  priority: 16
+  priority: 17
   children:
   - {fileID: 574922963850710820}
   - {fileID: -8450529855970865980}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -894.8194, y: 1011.58057}
   guid: 9bba7ba8e6bef0248a5da915f7380c0c
-  priority: 6
+  priority: 7
   message: gotcha!!!
 --- !u!114 &-4987564836445033968
 MonoBehaviour:
@@ -126,8 +126,8 @@ MonoBehaviour:
   children:
   - {fileID: -5789525585994014425}
   - {fileID: 7188129883305872028}
-  - {fileID: -5511732783932645331}
   - {fileID: 5619338539676528059}
+  - {fileID: -5511732783932645331}
 --- !u!114 &-4046866571602888856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -363.4999, y: 776.42035}
   guid: 938d43c40b7802f4d934dd1346cd2a62
-  priority: 7
+  priority: 8
   child: {fileID: -2930580929196267961}
   keyName: lastSeenLocation
   runCondition: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -456.9648, y: 1299.8668}
   guid: d506a1b661e722e428b5fd9aefc6c82b
-  priority: 11
+  priority: 12
   targetKeyName: target
   acceptableDistance: 2
   angleDegrees: 30
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: 180.04509, y: 1155.8206}
   guid: 71cc292e34123ab428573e920e9e06e5
-  priority: 15
+  priority: 16
   blackboardKeyName: lastSeenLocation
 --- !u!114 &-2930580929196267961
 MonoBehaviour:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -350.69986, y: 950.82043}
   guid: 8a59aa19a3e0ba741825550812e0a903
-  priority: 8
+  priority: 9
   children:
   - {fileID: 8731890787356176399}
   - {fileID: -188274692617992052}
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: 814.92, y: 833.5992}
   guid: ff443c73cdc80204086ed6eaa3078d83
-  priority: 19
+  priority: 20
   waitTime: 2
 --- !u!114 &-188274692617992052
 MonoBehaviour:
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -609.92126, y: 1243.3649}
   guid: edcf7e23342835a4b9c932c1517ec717
-  priority: 10
+  priority: 11
   waitTime: 2
 --- !u!114 &11400000
 MonoBehaviour:
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: 395.70004, y: 1032.3207}
   guid: d15e9f9dc35e9404fbfce49d3366dada
-  priority: 17
+  priority: 18
   patrolPointKeyName: nextPatrolPoint
 --- !u!114 &1193376568726971353
 MonoBehaviour:
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -278.76035, y: 1329.843}
   guid: 3c4d3846549580d45b9ea48739a73bb7
-  priority: 12
+  priority: 13
   waitTime: 2
 --- !u!114 &4301677676769400855
 MonoBehaviour:
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -101.05031, y: 1290.1959}
   guid: 4515e518edee68b48a6540aadb4ab1e4
-  priority: 13
+  priority: 14
   targetKeyName: target
   acceptableDistance: 2
   angleDegrees: -60
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: 51.302494, y: 1226.0787}
   guid: 554e0a0ac1d6d02488691be42bb06d27
-  priority: 14
+  priority: 15
   waitTime: 2
 --- !u!114 &5619338539676528059
 MonoBehaviour:
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -1128.8, y: 971.6}
   guid: c84aed0a50dc3074cb4dd8c4ec2b139c
-  priority: 0
+  priority: 6
   keyName: 
 --- !u!114 &7188129883305872028
 MonoBehaviour:
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphPos: {x: -784.36884, y: 1124.5815}
   guid: 62facfb4b0c5519408ef0163ff7a789b
-  priority: 9
+  priority: 10
   targetKeyName: lastSeenLocation
   acceptableDistance: 2
 --- !u!114 &8803980008345415796

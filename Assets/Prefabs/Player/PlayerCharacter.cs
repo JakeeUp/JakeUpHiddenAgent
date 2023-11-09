@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharacter : MonoBehaviour
+public class PlayerCharacter : MonoBehaviour, ITeamInterface
 {
     [SerializeField] private Joystick moveStick;
     [SerializeField] private Joystick aimStick;
@@ -11,6 +11,7 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] float turnSpeed = 30f;
     [SerializeField] float turnAnimationSmoothLerpFactor = 10f;
     [SerializeField] CameraRig cameraRig;
+    [SerializeField] int teamID = 1;
     CharacterController characterController;
     InventoryComponent inventoryComponent;
     MovementComponent movementComponent;
@@ -31,6 +32,7 @@ public class PlayerCharacter : MonoBehaviour
         inventoryComponent.NextWeapon();
     }
 
+
     private void Awake()
     {
         moveStick.onInputValueChanged += MoveInputUpdated;
@@ -43,7 +45,10 @@ public class PlayerCharacter : MonoBehaviour
         inventoryComponent = GetComponent<InventoryComponent>();
         movementComponent = GetComponent<MovementComponent>();
     }
-
+    public int GetTeamID()
+    {
+        return teamID;
+    }
     private void AimStickTapped()
     {
         animator.SetTrigger("switchWeapon");
