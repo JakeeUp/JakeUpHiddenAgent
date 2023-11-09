@@ -12,9 +12,12 @@ public class PlayerCharacter : MonoBehaviour, ITeamInterface
     [SerializeField] float turnAnimationSmoothLerpFactor = 10f;
     [SerializeField] CameraRig cameraRig;
     [SerializeField] int teamID = 1;
+    [SerializeField] UIManager uiManager;
+
     CharacterController characterController;
     InventoryComponent inventoryComponent;
     MovementComponent movementComponent;
+    HealthComponet healthComponet;
     Vector2 moveInput;
     Vector2 aimInput;
 
@@ -44,7 +47,17 @@ public class PlayerCharacter : MonoBehaviour, ITeamInterface
         animator = GetComponent<Animator>();
         inventoryComponent = GetComponent<InventoryComponent>();
         movementComponent = GetComponent<MovementComponent>();
+        healthComponet = GetComponent<HealthComponet>();
+        healthComponet.onHealthEmpty += StartDeath;
     }
+
+    private void StartDeath(float delta, float maxHealth)
+    {
+        animator.SetTrigger("Die");
+        uiManager.SetGameplayControlEnabled(false);
+        Debug.Log("Player dead emoji");
+    }
+
     public int GetTeamID()
     {
         return teamID;
