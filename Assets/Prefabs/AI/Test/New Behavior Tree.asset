@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4defb9a83527a43b64274388e3263c, type: 3}
   m_Name: BTTask_RotateTowardsTarget
   m_EditorClassIdentifier: 
-  graphPos: {x: -1442.3998, y: 966.8112}
+  graphPos: {x: -1440.8, y: 967.2}
   guid: f8984ac095d0b0b4db472683d65d841b
   priority: 5
   keyName: target
