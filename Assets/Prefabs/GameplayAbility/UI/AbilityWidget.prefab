@@ -180,6 +180,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d84d42cfcfb20c41844e14953e9b6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 8059730596090194242}
+  CooldownImage: {fileID: 3477139887674700343}
+  highlightedScale: 1.5
+  scaleSpeed: 20
+  highlightOffset: 200
+  widgetRoot: {fileID: 4360139967212925461}
 --- !u!114 &2284769625279542498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +226,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6935772058580263874}
   - component: {fileID: 5934204927467856434}
-  - component: {fileID: 4084630035817037716}
   - component: {fileID: 3477139887674700343}
   m_Layer: 5
   m_Name: Cooldown
@@ -256,18 +261,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7418223747121375712}
   m_CullTransparentMesh: 1
---- !u!114 &4084630035817037716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418223747121375712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d84d42cfcfb20c41844e14953e9b6b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3477139887674700343
 MonoBehaviour:
   m_ObjectHideFlags: 0

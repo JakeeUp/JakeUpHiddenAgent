@@ -130,6 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da46032372b680489b3cc3c191dc6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owningAbilityComponent: {fileID: 0}
+  abilityWidgetPrefab: {fileID: 55289945422813376, guid: 26723d8fea3c8f442add5bf8ddf0b5b9,
+    type: 3}
+  widgetRoot: {fileID: 4360139967212925461}
 --- !u!114 &2284769625279542498
 MonoBehaviour:
   m_ObjectHideFlags: 0

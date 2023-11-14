@@ -8,8 +8,14 @@ public abstract class Ability : ScriptableObject
 {
     [SerializeField] float staminaCost;
     [SerializeField] float cooldownDuration;
+    [SerializeField] Sprite icon;
 
     bool onCooldown = false;
+
+    public event Action<float> onCooldownStarted;
+
+
+    public Sprite GetIcon() { return icon; }    
     public AbilityComponent OwningAbilityComponent
     {
         get;
@@ -46,6 +52,7 @@ public abstract class Ability : ScriptableObject
     IEnumerator CooldownCoroutine()
     {
         onCooldown = true;
+        onCooldownStarted?.Invoke(cooldownDuration);
         yield return new WaitForSeconds(cooldownDuration);
         onCooldown = false;
     }
