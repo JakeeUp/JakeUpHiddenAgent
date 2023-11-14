@@ -50,4 +50,5 @@ public abstract class Ability : ScriptableObject
         onCooldown = false;
     }
 
+    public abstract void ActivateAbility();
 }

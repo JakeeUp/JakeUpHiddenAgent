@@ -64,4 +64,11 @@ public abstract class Decorator : BTNode, IBTNodeParent
         base.End();
         child.End();
     }
+
+    public override BTNode CloneNode()
+    {
+        Decorator selfClone = Instantiate(this);
+        selfClone.child = child.CloneNode();
+        return selfClone;
+    }
 }

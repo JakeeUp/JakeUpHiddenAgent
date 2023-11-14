@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour, IMovementInterface, IBTTaskInterface, ITeamInterface
 {
@@ -18,6 +19,8 @@ public class Enemy : MonoBehaviour, IMovementInterface, IBTTaskInterface, ITeamI
 
     Vector3 prevPosition;
     Vector3 velocity;
+
+    NavMeshAgent agent;
 
     ValueGuage healthBar;
 
@@ -35,6 +38,7 @@ public class Enemy : MonoBehaviour, IMovementInterface, IBTTaskInterface, ITeamI
         movementComponent = GetComponent<MovementComponent>();
         animator = GetComponent<Animator>();
         damageComponent.SetTeamInterface(this);
+        agent = GetComponent<NavMeshAgent>();
     }
 
     public int GetTeamID()
@@ -101,5 +105,15 @@ public class Enemy : MonoBehaviour, IMovementInterface, IBTTaskInterface, ITeamI
     {
        
         Destroy(gameObject);
+    }
+
+    public float GetMoveSpeed()
+    {
+        return agent.speed;
+    }
+
+    public void SetMoveSpeed(float speed)
+    {
+        agent.speed = speed;
     }
 }
