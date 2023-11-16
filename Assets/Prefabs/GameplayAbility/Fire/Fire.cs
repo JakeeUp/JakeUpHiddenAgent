@@ -31,6 +31,14 @@ public class Fire : Ability
 
     private void ApplyDamage(GameObject target)
     {
-        Debug.Log($"damaging: {target}");
+        HealthComponet targetHealthComp = target.GetComponent<HealthComponet>();
+        if (targetHealthComp == null)
+            return;
+
+        if(target.GetComponent<ITeamInterface>().GetRelationTowards(OwningAbilityComponent.gameObject) != TeamRelation.Hostile) 
+            return;
+
+        DurationDamager damager = targetHealthComp.gameObject.AddComponent<DurationDamager>();
+        damager.Init(damageDuration, damage, targetHealthComp, OwningAbilityComponent.gameObject);
     }
 }
