@@ -50,4 +50,15 @@ public class AbilityComponent : MonoBehaviour
     {
         return maxStamina;
     }
+
+    internal void TryActivateAbility(Ability abilityToCast)
+    {
+       foreach(Ability ability in abilities)
+        {
+            if(ability.GetType() == abilityToCast.GetType())
+            {
+                ability.ActivateAbility();
+            }
+        }
+    }
 }

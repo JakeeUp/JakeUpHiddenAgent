@@ -12,7 +12,7 @@ public class TargetScanner : MonoBehaviour
 
     private void Awake()
     {
-        scanPivot.transform.localScale = Vector3.zero;
+        //scanPivot.transform.localScale = Vector3.zero;
     }
     public void Init(float range, float duration, GameObject Visual)
     {

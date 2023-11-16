@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c8a342050bc46349812d9c3fbc35163, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
-  staminaCost: 0
-  cooldownDuration: 0
-  icon: {fileID: 0}
-  scannerPrefab: {fileID: 0}
-  range: 3
+  staminaCost: 30
+  cooldownDuration: 6
+  icon: {fileID: 21300000, guid: a22ff44c941844f4ea5449389555cd07, type: 3}
+  scannerPrefab: {fileID: -3444173501817546672, guid: 4886a31bb1bfa8f4ca0c99646fd6de34,
+    type: 3}
+  range: 10
   scanDuration: 0.5
   damage: 40
   damageDuration: 3
-  ScanVFX: {fileID: 0}
+  ScanVFX: {fileID: 4317838886930070227, guid: 3aef425b14aa6d640a87aeb26dbfb75b, type: 3}
+  damageVFX: {fileID: 6294508013172393196, guid: 043176b6a68be2b43b073aaaa4782c7d,
+    type: 3}

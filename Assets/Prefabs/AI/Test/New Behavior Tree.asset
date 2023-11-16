@@ -128,6 +128,7 @@ MonoBehaviour:
   - {fileID: 7188129883305872028}
   - {fileID: 5619338539676528059}
   - {fileID: -5511732783932645331}
+  - {fileID: 3414591940984130764}
 --- !u!114 &-4046866571602888856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,6 +309,7 @@ MonoBehaviour:
   - {fileID: 8803980008345415796}
   - {fileID: -702017225525027496}
   - {fileID: 5619338539676528059}
+  - {fileID: 3414591940984130764}
   blackboard: {fileID: 11400000, guid: 2b7ac682759b5134babd882f15eb6688, type: 2}
 --- !u!114 &574922963850710820
 MonoBehaviour:
@@ -341,6 +343,22 @@ MonoBehaviour:
   guid: 3c4d3846549580d45b9ea48739a73bb7
   priority: 13
   waitTime: 2
+--- !u!114 &3414591940984130764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2272e2d5ae4cf9946bbc4ff877f09e58, type: 3}
+  m_Name: BTTask_CastAbility
+  m_EditorClassIdentifier: 
+  graphPos: {x: -1176.9591, y: 998.12726}
+  guid: 642d1c0b1b3a8794cbbbaffa50a0c337
+  priority: 0
+  abilityToCast: {fileID: 11400000, guid: 768e3d955c042a44ca87fb1fc1b1a41f, type: 2}
 --- !u!114 &4301677676769400855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba2132e5ea30f345bdefe530b00c378, type: 3}
   m_Name: BTTask_Attack
   m_EditorClassIdentifier: 
-  graphPos: {x: -1130.8114, y: 974.0112}
+  graphPos: {x: -1016.5526, y: 976.41125}
   guid: c84aed0a50dc3074cb4dd8c4ec2b139c
   priority: 6
   keyName: 
