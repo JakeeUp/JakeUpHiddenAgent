@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,5 +36,13 @@ public class HealthComponet : MonoBehaviour
         {
             onHealthEmpty?.Invoke(amt, maxHealth);
         }
+    }
+
+    internal bool isFull()
+    {
+       if(currentHealth >= maxHealth)
+            return true;
+
+       return false;
     }
 }
