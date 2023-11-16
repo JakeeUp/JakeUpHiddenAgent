@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HealthBoost
   m_EditorClassIdentifier: 
   staminaCost: 20
-  cooldownDuration: 0
+  cooldownDuration: 3
   icon: {fileID: 21300000, guid: 7e7df2a887e2fb044b8568f240ef0ef4, type: 3}
   healthAmt: 25
   healthRegenDuration: 4
