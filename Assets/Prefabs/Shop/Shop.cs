@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,4 +13,8 @@ public class Shop : ScriptableObject
         return buyer.TryPurchaseItem(item);
     }
 
+    internal ShopItem[] GetItems()
+    {
+        return items;
+    }
 }

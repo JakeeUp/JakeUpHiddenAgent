@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   title: Rifle
-  price: 80
-  icon: {fileID: 0}
+  price: 800
+  icon: {fileID: 21300000, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
   item: {fileID: 2562931518948565218, guid: 2cd15025e366e0e4baad9f3ba19cb82b, type: 3}
-  description: 'YOU GONNA WANT THIS ONE
+  description: 'YOU''RE GONNA WANT THIS ONE
+
 
     dps: 80
+
 
     firing rate: 4/s'
