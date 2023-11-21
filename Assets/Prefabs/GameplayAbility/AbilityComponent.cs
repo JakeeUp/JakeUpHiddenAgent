@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class AbilityComponent : MonoBehaviour
+public class AbilityComponent : MonoBehaviour, IPurchaseListener
 {
     [SerializeField] Ability[] initialAbilities;
     [SerializeField] float stamina = 100;
@@ -60,5 +60,14 @@ public class AbilityComponent : MonoBehaviour
                 ability.ActivateAbility();
             }
         }
+    }
+
+    public bool ItemPurchased(UnityEngine.Object newPurchase)
+    {
+        Ability purchasedAbility = newPurchase as Ability;
+        if(purchasedAbility == null) { return false; }
+
+        GiveAbility(purchasedAbility);
+        return true;
     }
 }

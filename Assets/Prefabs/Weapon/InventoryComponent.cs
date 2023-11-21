@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryComponent : MonoBehaviour
+public class InventoryComponent : MonoBehaviour, IPurchaseListener
 {
     [SerializeField] Weapon[] initialWeaponPrefabs;
     [SerializeField] Transform[] weaponSlots;
@@ -22,23 +22,28 @@ public class InventoryComponent : MonoBehaviour
     {
         foreach(Weapon weaponPrefab in initialWeaponPrefabs)
         {
-            Transform weaponSlot = defaultWeaponSlot;
-            foreach(Transform slot in weaponSlots)
-            {
-                if(slot.name == weaponPrefab.GetSlotName())
-                {
-                    weaponSlot = slot;
-                    break;
-                }
-            }
-
-            Weapon newWeapon = Instantiate<Weapon>(weaponPrefab, weaponSlot);
-            newWeapon.Init(gameObject);
-            weapons.Add(newWeapon);
-            newWeapon.UnEnquip();
+            GiveWeapon(weaponPrefab);
         }
 
         NextWeapon();
+    }
+
+    private void GiveWeapon(Weapon weaponPrefab)
+    {
+        Transform weaponSlot = defaultWeaponSlot;
+        foreach (Transform slot in weaponSlots)
+        {
+            if (slot.name == weaponPrefab.GetSlotName())
+            {
+                weaponSlot = slot;
+                break;
+            }
+        }
+
+        Weapon newWeapon = Instantiate<Weapon>(weaponPrefab, weaponSlot);
+        newWeapon.Init(gameObject);
+        weapons.Add(newWeapon);
+        newWeapon.UnEnquip();
     }
 
     public void NextWeapon()
@@ -86,5 +91,19 @@ public class InventoryComponent : MonoBehaviour
         {
             weapons[currentWeaponIndex].Attack();
         }
+    }
+
+    public bool ItemPurchased(UnityEngine.Object newPurchase)
+    {
+        GameObject purchasedGameObject = newPurchase as GameObject;
+        if (purchasedGameObject == null)
+        {
+            return false;
+        }
+        Weapon purchasedWeapon = purchasedGameObject.GetComponent<Weapon>();
+        if (purchasedWeapon == null) { return false; }
+
+        GiveWeapon(purchasedWeapon);
+        return true;
     }
 }
